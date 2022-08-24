@@ -228,7 +228,7 @@
     </div>
 
 
-  
+  <!--Add modaly second-->
     
     <!-- Add modaly -->
     <div class="add-modaly modaly-wrapper">
@@ -237,11 +237,44 @@
         <div class="modaly-body">
           <div class="card-body">
                      <div class="">
-                        <form class="form"  autocomplete="off"  data-toggle="validator" id='edit-product'>
-                            <div class="row " >
+                        <form class="form"  autocomplete="off"  data-toggle="validator" id="form-wizard1">
+                             <ul id="top-tab-list" class="p-0">
+                           <li class="active" id="account">
+                              <a href="#account">
+                              <i class="ri-lock-unlock-line"></i><span>Product Class</span>
+                              </a>
+                           </li>
+                           <li id="personal">
+                              <a href="#personal">
+                              <i class="ri-user-fill"></i><span>Identification</span>
+                              </a>
+                           </li>
+                           <li id="payment">
+                              <a href="#payment">
+                              <i class="ri-camera-fill"></i><span>Product Details</span>
+                              </a>
+                           </li>
+                           <li id="confirm">
+                              <a href="#confirm">
+                              <i class="ri-check-fill"></i><span>Finish</span>
+                              </a>
+                           </li>
+                        </ul>
+                        <!-- fieldsets -->
+                        <fieldset id="account">
+                           <div  class="form-card text-left">
+                              <div class="row">
+                                 <div class="col-7">
+                                    <h3 class="mb-4">Account Information:</h3>
+                                 </div>
+                                 <div class="col-5">
+                                    <h2 class="steps">Step 1 - 4</h2>
+                                 </div>
+                              </div>
+                              <div class="row " >
                                 <div class="col-md-12">
                                 </div>  
-                                <div class="col-md-6">                      
+                                <div class="col-md-12">                      
                                     <div class="form-group">
                                         <label>Product Category *</label>
                                          <select class="form-control" id="editproductCategory" name="productCategory" data-errors="Please Enter Product Category."  required>
@@ -281,36 +314,47 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>  
-                                <div class="col-md-6">                      
+                         
+                        
+                                  
+                                
+<!--                              
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Image</label>
+                                        <input type="file" class="form-control image-file" style="height: fit-content;" name="pic" accept="image/*">
+                                    </div>
+                                </div> -->
+                            </div>   
+                           </div>
+                           <button type="button" name="next" class="btn btn-primary next action-button float-right" value="Next" >Next</button>
+                        </fieldset>
+                        <fieldset id="personal">
+                           <div class="form-card text-left">
+                              <div class="row">
+                                 <div class="col-7">
+                                    <h3 class="mb-4">Enter Product Identification:</h3>
+                                 </div>
+                                 <div class="col-5">
+                                    <h2 class="steps">Step 2 - 4</h2>
+                                 </div>
+                              </div>
+                                     <div class="col-md-12">                      
                                     <div class="form-group">
                                         <label>Product Name *</label>
                                         <input type="text" class="form-control" id='editproductName' placeholder="Enter Product Name" data-errors="Please Enter Product Name." name="productName" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>    
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Product Number</label>
                                         <input type="text" class="form-control"  id='productNumber'placeholder="Enter Product Number" data-errors="Please product number." name="editProductNumber" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div> 
-                                <div class="col-md-6"> 
-                                    <div class="form-group">
-                                        <label>Product Specs</label>
-                                        <input type="text" class="form-control" id='editproductSpecs' placeholder="Enter Product Specs" data-errors="Please Product specs." name="productSpecs" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6"> 
-                                    <div class="form-group">
-                                        <label>Weight (g) *</label>
-                                        <input type="number" class="form-control" id='editproductWeight'placeholder="Enter Code" data-errors="Please product weight." name="productWeight" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                  
-                                   <div class="col-md-6">
+                              <div class="row">
+                                  <div class="col-md-6">
                                     <div class="form-group">
                                      <label>Product Class</label>
                                         <input type="text" class="form-control" id='editproductClass'placeholder="Enter Code" data-errors="Please Enter Code." name="productClass" required>
@@ -325,67 +369,65 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-<!--                              
-                                <div class="col-md-12">
+                              
+                              </div>
+                           </div>
+                           <button type="button" name="next" class="btn btn-primary next action-button float-right" value="Next" >Next</button>
+                           <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-right mr-3" value="Previous" >Previous</button>
+                        </fieldset>
+                        <fieldset>
+                           <div class="form-card text-left">
+                              <div class="row">
+                                 <div class="col-7">
+                                    <h3 class="mb-4">Enter Product Details:</h3>
+                                 </div>
+                                 <div class="col-5">
+                                    <h2 class="steps">Step 3 - 4</h2>
+                                 </div>
+                              </div>
+                                    <div class="col-md-6"> 
                                     <div class="form-group">
-                                        <label>Image</label>
-                                        <input type="file" class="form-control image-file" style="height: fit-content;" name="pic" accept="image/*">
-                                    </div>
-                                </div> -->
-                            </div>   
-                           
-                              <div class="row notadmin" >
-                                <div class="col-md-12">
-                                </div>  
-                                <div class="col-md-6">                      
-                                    <div class="form-group">
-                                        <label>Part Name *</label>
-                                        <input type="text" class="form-control" id='editPartName' placeholder="Enter Part Name" data-errors="Please Enter Part Name." name="PartName" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>    
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Part Number</label>
-                                        <input type="text" class="form-control"  id='PartNumber'placeholder="Enter Part Number" data-errors="Please Part number." name="PartNumber" required>
+                                        <label>Product Specs</label>
+                                        <input type="text" class="form-control" id='editproductSpecs' placeholder="Enter Product Specs" data-errors="Please Product specs." name="productSpecs" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div> 
                                 <div class="col-md-6"> 
                                     <div class="form-group">
-                                        <label>Part Specs</label>
-                                        <input type="text" class="form-control" id='editPartSpecs' placeholder="Enter Part Specs" data-errors="Please Part specs." name="PartSpecs" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-6"> 
-                                    <div class="form-group">
-                                        <label>Part Weight (g) *</label>
-                                        <input type="number" class="form-control" id='editPartWeight'placeholder="Enter Code" data-errors="Please Part weight." name="PartWeight" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                     <label>Part Class</label>
-                                        <input type="text" class="form-control" id='editPartClass'placeholder="Enter Code" data-errors="Please Enter Code." name="PartClass" required>
+                                        <label>Weight (g) *</label>
+                                        <input type="number" class="form-control" id='editproductWeight'placeholder="Enter Code" data-errors="Please product weight." name="productWeight" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-<!--                               
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Image</label>
-                                        <input type="file" class="form-control image-file" style="height: fit-content;" name="pic" accept="image/*">
-                                    </div>
-                                </div> -->
-                            </div>   
-                                                
-                               <div class="modal-footer">
-                                <button type="reset" class="btn btn-danger">Reset</button>
-                                <button id="edit" class="btn btn-primary">Submit</button>
-                                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Close</button>  -->
-                     </div>
+                           </div>
+                        <button id="edit" class="btn btn-primary">Add Product</button>
+                           <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-right mr-3" value="Previous" >Previous</button>
+                        </fieldset>
+                        <fieldset>
+                           <div class="form-card">
+                              <div class="row">
+                                 <div class="col-7">
+                                    <h3 class="mb-4 text-left">Finish:</h3>
+                                 </div>
+                                 <div class="col-5">
+                                    <h2 class="steps">Step 4 - 4</h2>
+                                 </div>
+                              </div>
+                              <br><br>
+                              <h2 class="text-success text-center"><strong>SUCCESS !</strong></h2>
+                              <br>
+                              <div class="row justify-content-center">
+                                 <div class="col-3"> <img src="images/page-img/img-success.png" class="fit-image" alt="fit-image"> </div>
+                              </div>
+                              <br><br>
+                              <div class="row justify-content-center">
+                                 <div class="col-7 text-center">
+                                    <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                 </div>
+                              </div>
+                           </div>
+                                 <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-right mr-3" value="Previous" >Previous</button>
+                        </fieldset>
                    </form>
                  </div>
             <!-- Modal -->
@@ -401,7 +443,55 @@
         <div class="modaly-body">
              <div class="card-body">
                      <div class="">
-                                 <form class="form"  autocomplete="off"  data-toggle="validator" id='edit-product'>
+                                 <form class="form"  autocomplete="off"  data-toggle="validator" id='form-wizard1'>
+                      
+                                     <ul id="top-tab-list" class="p-0">
+                           <li class="active" id="account" >
+                              <a href="javascript:void();">
+                              <i class="ri-lock-unlock-line"></i><span>Product</span>
+                              </a>
+                           </li>
+                           <li id="personal" >
+                              <a href="javascript:void();">
+                              <i class="ri-user-fill"></i><span>Material</span>
+                              </a>
+                           </li>
+                           
+                           <li id="payment" >
+                              <a href="javascript:void();">
+                              <i class="ri-camera-fill"></i><span>Parts</span>
+                              </a>
+                           </li>
+                           <li id="payment">
+                              <a href="javascript:void();">
+                              <i class="ri-user-fill"></i><span>Substance</span>
+                              </a>
+                           </li>
+                           <li id="confirm">
+                              <a href="javascript:void();">
+                              <i class="ri-check-fill"></i><span>Finish</span>
+                              </a>
+                           </li>
+                        </ul>
+                        <!-- fieldsets -->
+                        <fieldset >
+                           <div class="form-card text-left">
+                            <div class="row error notadmin" style="display: none;"> 
+                                <img src="./404.png" width="50%" height="50%" alt="">
+                                <h3>
+                                    Oops! You Can't Edit This Section.
+                                </h3>
+                              </div>
+                              <div class="row" class="row adminelement" style="display: none;">
+                                 <div class="col-7">
+                                    <h3 class="mb-4">Product Details:</h3>
+                                 </div>
+                                 <div class="col-5">
+                                    <h2 class="steps">Step 1 - 4</h2>
+                                 </div>
+                              </div>
+                              <div class="row">
+                                 
                           <div class="row adminelement" style="display: none;">
                             
                                
@@ -494,81 +584,23 @@
                                     </div>
                                 </div> -->
                             </div>   
-                            <div class="row notadmin" style="display: none;">
-                                   <header style="margin-top: 15px; margin-bottom: 15px;">Parts Section</header>
-                                <div class="col-md-12">
-                                </div>  
-                                <div class="col-md-7">                      
-                                    <div class="form-group">
-                                        <label>Part Name *</label>
-                                        <input type="text" class="form-control" id='editpartName' placeholder="Enter Product Name" data-errors="Please Enter Part Name." name="PartName" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>    
-                                <div class="col-md-5">
-                                    <div class="form-group">
-                                        <label>Part Number</label>
-                                        <input type="text" class="form-control"  id='partNumber'placeholder="Enter Part Number" data-errors="Please Part number." name="partNumber" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-12"> 
-                                    <div class="form-group">
-                                        <label>Part Specs</label>
-                                        <input type="text" class="form-control" id='editpartSpecs' placeholder="Enter part Specs" data-errors="Please part specs." name="partSpecs" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-3"> 
-                                    <div class="form-group">
-                                        <label>Part Mass (g/EA) *</label>
-                                        <input type="number" class="form-control" id='editpartMassgEA'placeholder="Please part mass" data-errors="Please part mass." name="partMassgEA" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                 <div class="col-md-3"> 
-                                    <div class="form-group">
-                                        <label>Part Mass (g) *</label>
-                                        <input type="number" class="form-control" id='editpartMassg'placeholder="Please part mass" data-errors="Please part mass." name="partMassg" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                 <div class="col-md-6"> 
-                                    <div class="form-group">
-                                        <label>Part Mass (%) *</label>
-                                        <input type="number" class="form-control" id='editpartMassPerc'placeholder="Please part mass" data-errors="Please part mass." name="partMassPerc" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div> 
-                                   <div class="col-md-6">
-                                    <div class="form-group">
-                                     <label>Reused Part</label>
-                                      <select name="reusedPart" id="editpartClass" class="selectpicker form-control" data-style="py-0">
-                                       <option>Select Option</option>
-                                       <option>Yes</option>
-                                       <option>No</option>
-                                     
-                                    </select>
-                                        
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                     <label>Supplier Information</label>
-                                        <input type="text" class="form-control" id='editcompanyName'placeholder="Enter Code" data-errors="Please Enter Code." name="supplierInfo" required>
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <!-- <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label>Image</label>
-                                        <input type="file" class="form-control image-file" style="height: fit-content;" name="pic" accept="image/*">
-                                    </div>
-                                </div> -->
-                            </div>   
-                            <div class="row notadmin" style="display: none;">
-                                <header style="margin-top: 15px; margin-bottom: 15px;">Material Section</header>
+
+                              </div>
+                           </div>
+                           <button type="button" name="next" class="btn btn-primary next action-button float-right" value="Next" >Next</button>
+                        </fieldset>
+                        <fieldset>
+                           <div class="form-card text-left">
+                            <div class="row adminelement" style="display: none;"> 
+                             <div class="row error adminelement" style="display: none;"> 
+                                <img src="./404.png" width="75%" height="75%" alt="">
+                                <h3>
+                                    Oops! You Can't Edit This Section.
+                                </h3>
+                              </div>
+                            </div>
+                               <div class="row notadmin" style="display: none;">
+                            
                                           <div class="col-md-6">                      
                                     <div class="form-group">
                                         <label>Material Group *</label>
@@ -714,17 +746,111 @@
                                 </div> 
                                  
                                 </div>
+                           </div>
+                            <button type="button" name="next" class="btn btn-primary next action-button float-right" value="Next" >Next</button>
+                           <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-right mr-3" value="Previous" >Previous</button>
+                        </fieldset>
+                        <fieldset>
+                           <div class="form-card text-left">
+                             <div class="row adminelement" style="display: none;"> 
+                             <div class="row error adminelement" style="display: none;"> 
+                                <img src="./404.png" width="75%" height="75%" alt="">
+                                <h3>
+                                    Oops! You Can't Edit This Section.
+                                </h3>
+                              </div>
+                            </div>
+                         
+                            <div class="row notadmin" style="display: none;">
+                           
+                                <div class="col-md-12">
+                                </div>  
+                                <div class="col-md-7">                      
+                                    <div class="form-group">
+                                        <label>Part Name *</label>
+                                        <input type="text" class="form-control" id='editpartName' placeholder="Enter Product Name" data-errors="Please Enter Part Name." name="PartName" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>    
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label>Part Number</label>
+                                        <input type="text" class="form-control"  id='partNumber'placeholder="Enter Part Number" data-errors="Please Part number." name="partNumber" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-12"> 
+                                    <div class="form-group">
+                                        <label>Part Specs</label>
+                                        <input type="text" class="form-control" id='editpartSpecs' placeholder="Enter part Specs" data-errors="Please part specs." name="partSpecs" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3"> 
+                                    <div class="form-group">
+                                        <label>Part Mass (g/EA) *</label>
+                                        <input type="number" class="form-control" id='editpartMassgEA'placeholder="Please part mass" data-errors="Please part mass." name="partMassgEA" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                 <div class="col-md-3"> 
+                                    <div class="form-group">
+                                        <label>Part Mass (g) *</label>
+                                        <input type="number" class="form-control" id='editpartMassg'placeholder="Please part mass" data-errors="Please part mass." name="partMassg" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                 <div class="col-md-6"> 
+                                    <div class="form-group">
+                                        <label>Part Mass (%) *</label>
+                                        <input type="number" class="form-control" id='editpartMassPerc'placeholder="Please part mass" data-errors="Please part mass." name="partMassPerc" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                                   <div class="col-md-6">
+                                    <div class="form-group">
+                                     <label>Reused Part</label>
+                                      <select name="reusedPart" id="editpartClass" class="selectpicker form-control" data-style="py-0">
+                                       <option>Select Option</option>
+                                       <option>Yes</option>
+                                       <option>No</option>
+                                     
+                                    </select>
+                                        
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                     <label>Supplier Information</label>
+                                        <input type="text" class="form-control" id='editcompanyName'placeholder="Enter Code" data-errors="Please Enter Code." name="supplierInfo" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
                                 <!-- <div class="col-md-12">
                                     <div class="form-group">
                                         <label>Image</label>
                                         <input type="file" class="form-control image-file" style="height: fit-content;" name="pic" accept="image/*">
                                     </div>
                                 </div> -->
-                            </div>   
-                            
-                            <div class="row notadmin" style="display: none;">
+                            </div> 
+                           </div>
+                           <button type="button" name="next" class="btn btn-primary next action-button float-right" value="Next" >Next</button>
+                           <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-right mr-3" value="Previous" >Previous</button>
+                        </fieldset>
+                        <fieldset>
+                           <div class="form-card text-left">
+                               <div class="row adminelement" style="display: none;"> 
+                             <div class="row error adminelement" style="display: none;"> 
+                                <img src="./404.png" width="75%" height="75%" alt="">
+                                <h3>
+                                    Oops! You Can't Edit This Section.
+                                </h3>
+                              </div>
+                            </div>
+                                <div class="row notadmin" style="display: none;">
                                 
-                                        <header style="margin-top: 15px; margin-bottom: 15px;">Subtance Section: </header>
+                    
                                      
                                 <div class="col-md-12">
                                 </div>  
@@ -780,12 +906,39 @@
                                     </div>
                                 </div> -->
                             </div>   
+                       
+                           </div>
+                           <button type="button" name="next" class="btn btn-primary next action-button float-right" value="Next" >Next</button>
                          
-                               <div class="modal-footer">
-                                   <button type="reset" class="btn btn-danger">Reset</button>
-                                <button id="edit" class="btn btn-primary " >Edit Product</button>
-                 
-                     </div>
+                           <button type="button" name="previous" class="btn btn-dark previous action-button-previous float-right mr-3" value="Previous" >Previous</button>
+                        </fieldset>
+                        <fieldset>
+                           <div class="form-card">
+                              <div class="row">
+                                 <div class="col-7">
+                                    <h3 class="mb-4 text-left">Finish:</h3>
+                                 </div>
+                                 <div class="col-5">
+                                    <h2 class="steps">Step 4 - 4</h2>
+                                 </div>
+                              </div>
+                              <br><br>
+                              <h2 class="text-success text-center" style="color:black"><strong>Confirm Changes? </strong></h2>
+                              <br><br><br>
+                              <div class="row justify-content-center">
+                                 <div class="col-3"> <span style="font-size: 10rem;">✔️</span>  </div>
+                              </div>
+                              <br><br>
+                              <div class="row justify-content-center">
+                               
+                              </div>
+                           </div>
+                         <div class="confirmbutton">
+                               <button id="edit" class="btn right btn-primary" style="width: 50%;">Edit Product</button>
+                         </div>
+                            
+                        </fieldset>
+
                    </form>
                  </div>
             <!-- Modal -->
@@ -805,27 +958,47 @@
  </div>
 </div>
 
+    <!--View Data table tree-->
+
      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-scrollable" role="document">
                            <div class="modal-content">
                               
                               <div class="modal-body">
-                                 <div class="col-lg-12">
-               <div class="card card-block card-stretch card-height">
+                                
+                                 
+             
                   <div class="card-header d-flex justify-content-between">
                      <div class="header-title">
                         <h4 class="treeproducttitle card-title"></h4>
                      </div>
                   </div>
-                  <div class="card-body">
-                     <div class="table-responsive">
-                        <table id="tree-table-1" class="table table-hover table-bordered iq-bg-white tree">
-                         
-                           <tbody>
-                              <!--View Product Details-->
-                              <tr data-id="1" data-parent="0" data-level="1">
-                                 <td data-column="name">Product Details</td>
-                              </tr>
+               
+                 
+               
+                <div class="card-body">
+                    
+                     <ul class="nav nav-pills mb-3 nav-fill" id="pills-tab-1" role="tablist">
+                        <li class="nav-item">
+                           <a class="nav-link active" id="pills-home-tab-fill" data-toggle="pill" href="#pills-home-fill" role="tab" aria-controls="pills-home" aria-selected="true">Product</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="pills-profile-tab-fill" data-toggle="pill" href="#pills-profile-fill" role="tab" aria-controls="pills-profile" aria-selected="false">Parts</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" id="pills-contact-tab-fill" data-toggle="pill" href="#pills-contact-fill" role="tab" aria-controls="pills-contact" aria-selected="false">Material</a>
+                        </li>
+                         <li class="nav-item">
+                           <a class="nav-link" id="pills-Substance-tab-fill" data-toggle="pill" href="#pills-Substance-fill" role="tab" aria-controls="pills-Substance" aria-selected="false">Substance</a>
+                        </li>
+                     </ul>
+
+                    <div class="table-responsive">
+                    
+                     <tbody>
+                      <div class="tab-content" id="pills-tabContent-1">
+                        <div class="tab-pane fade show active" id="pills-home-fill" role="tabpanel" aria-labelledby="pills-home-tab-fill">
+                        
                                <tr data-id="2" data-parent="1" data-level="2">
                                <td class="" data-column="name">
                                      <div class="input-group mb-3">
@@ -888,18 +1061,9 @@
                                              </div>
                                  </td>
                               </tr>
-                              <!-- <tr data-id="3" data-parent="2" data-level="3">
-                                 <td data-column="name">Data 1.2</td>
-                              </tr>
-                              <tr data-id="4" data-parent="3" data-level="4">
-                                 <td data-column="name">Data 1.3</td>
-                              </tr> -->
-
-                                <!--View Product Parts-->
-                              <tr data-id="6" data-parent="0" data-level="1">
-
-                                 <td data-column="name">Product Parts</td>
-                              </tr>
+                        </div>
+                        <div class="tab-pane fade" id="pills-profile-fill" role="tabpanel" aria-labelledby="pills-profile-tab-fill">
+                            
                               <tr  data-id="7" data-parent="6" data-level="2">
                                      <td class="" data-column="name">
                                                 <div class="input-group mb-3">
@@ -993,12 +1157,9 @@
                                              </div>
                                  </td>
                               </tr>
-                              
-                              <!--View Product Material-->
-                              
-                              <tr data-id="10" data-parent="0" data-level="1">
-                                 <td data-column="name">Product Material</td>
-                              </tr>
+                        </div>
+                        <div class="tab-pane fade" id="pills-contact-fill" role="tabpanel" aria-labelledby="pills-contact-tab-fill">
+                        
                                  <tr data-id="11" data-parent="10" data-level="2">
                                   <td class="" data-column="name">
                                                 <div class="input-group mb-3">
@@ -1076,12 +1237,9 @@
                                  </td>
                               </tr>
                                
-
-
-                                 <!--View Product Material-->
-                              <tr data-id="14" data-parent="0" data-level="1">
-                                 <td data-column="name">Product Substance</td>
-                              </tr>
+                        </div>
+                        <div class="tab-pane fade" id="pills-Substance-fill" role="tabpanel" aria-labelledby="pills-Substance-tab-fill">
+                          
                               <tr data-id="15" data-parent="14" data-level="2">
                                   <td class="" data-column="name">
                                                 <div class="input-group mb-3">
@@ -1146,13 +1304,14 @@
                                              </div>
                                  </td>
                               </tr>
-                              
-                           </tbody>
-                        </table>
+                        </div>
                      </div>
+                   </tbody>
+                 
+                    </div>
+               
                   </div>
-               </div>
-            </div>
+            
                               </div>
                               <div class="modal-footer">
                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -1221,23 +1380,25 @@ const firebaseConfig = {
 };
 </script>
  <!-- <script  type="module" src="./auth.js" defer></script> -->
-  <script  type="module" src="./products.js" ></script>
-   <script>feather.replace()</script>
+
+   
     <!-- Backend Bundle JavaScript -->
     <script src="./backend-bundle.min.js"></script>
     
     <!-- Table Treeview JavaScript -->
     <script src="./table-treeview.js"></script>
-    <script src="./bstreeview.js"></script>
+ <script  type="module" src="./products.js" ></script>
+
     
     <!-- Chart Custom JavaScript -->
     <script src="./customizer.js"></script>
     
     <!-- Chart Custom JavaScript -->
-    <!-- <script async src="./chart-custom.js"></script> -->
+    <script async src="./chart-custom.js"></script>
     
     <!-- app JavaScript -->
     <script src="./app.js"></script>
      <!-- <script   type="module" src="./auth.js" ></script> -->
+     <script>feather.replace()</script>
   </body>
 </html>

@@ -21,7 +21,7 @@ admin.initializeApp({
 
 const csrfMiddleware = csrf({ cookie: true });
 
-const PORT = process.env.PORT || '8080';
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.engine("html", require("ejs").renderFile);
@@ -79,6 +79,37 @@ app.get("/dashboard", function (req, res) {
     .then((userData) => {
       console.log("Logged in:", userData.email)
       res.render("dashboard.html");
+    })
+    .catch((error) => {
+      res.redirect("/login");
+    });
+});
+
+
+app.get("/dataview", function (req, res) {
+   const sessionCookie = req.cookies.session || "";
+
+  admin
+    .auth()
+    .verifySessionCookie(sessionCookie, true /** checkRevoked */)
+    .then((userData) => {
+      console.log("Logged in:", userData.email)
+      res.render("dataview.html");
+    })
+    .catch((error) => {
+      res.redirect("/login");
+    });
+});
+
+app.get("/form", function (req, res) {
+   const sessionCookie = req.cookies.session || "";
+
+  admin
+    .auth()
+    .verifySessionCookie(sessionCookie, true /** checkRevoked */)
+    .then((userData) => {
+      console.log("Logged in:", userData.email)
+      res.render("form.html");
     })
     .catch((error) => {
       res.redirect("/login");
